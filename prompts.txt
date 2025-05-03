@@ -25,6 +25,39 @@
 
 Все возможные параметры для поиска квартир находятся в файле filters.json.
 
+Запрос для вспомогательной функции
+return axios.post("https://apigw.bi.group/sales-picker/microfe-v2/realEstateList", {
+  cityUUID,
+  propertyClasses,
+  propertyTypes,
+  realEstates,
+  mortgagePrograms,
+  placementLayoutTypes,
+  roomCounts,
+  priceInMillionMin,
+  priceInMillionMax,
+  floorMin,
+  floorMax,
+  squareMin,
+  squareMax,
+  isNotFirstFloors,
+  isNotLastFloors,
+  repairs,
+  readies,
+  readyYears,
+  readyQuarters,
+  bigvilleUUIDs,
+  filterTags,
+  pageNo,
+  pageSize,
+  companyIds
+}, {
+  headers: {
+    accept: "application/json",
+    "content-type": "application/json",
+  },
+})
+
 Примеры запросов:
 - "Найди мне квартиру в Астане с 3 комнатами, ценой от 12 до 439 млн тенге, площадью от 28 до 276 м², на 1-25 этаже, с ремонтом, готовой в 2022-2026 году, в комплексе с планировкой Линейка"
 - "Поищи мне квартиру в Алматы, ценой от 12 до 439 млн тенге, площадью от 28 до 276 м², на 1-25 этаже, с ремонтом, готовой в 2022-2026 году, в комплексе с планировкой Пистолет"
